@@ -25,12 +25,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class User implements UserDetails {
+
+    private static final long serialVersionUID = -794487295040369353L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
