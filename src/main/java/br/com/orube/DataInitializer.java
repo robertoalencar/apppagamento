@@ -31,8 +31,8 @@ public class DataInitializer implements CommandLineRunner {
 
 	log.debug("initializing clientes data ...");
 	Arrays.asList("Roberto", "Arthur", "Gabriel")
-		.forEach(v -> this.clientes.saveAndFlush(Cliente.builder().name(v).build()));
-
+		.forEach(v -> this.clientes.saveAndFlush(Cliente.builder().nome(v).build()));
+	
 	log.debug("printing all clientes ...");
 	this.clientes.findAll().forEach(c -> log.debug(" Cliente :" + c.toString()));
 
