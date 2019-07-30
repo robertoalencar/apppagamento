@@ -28,7 +28,7 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
+	/*
 	log.debug("initializing clientes data ...");
 	Arrays.asList("Roberto", "Arthur", "Gabriel")
 		.forEach(v -> this.clientes.saveAndFlush(Cliente.builder().nome(v).build()));
@@ -36,14 +36,22 @@ public class DataInitializer implements CommandLineRunner {
 	log.debug("printing all clientes ...");
 	this.clientes.findAll().forEach(c -> log.debug(" Cliente :" + c.toString()));
 
-	this.users.save(User.builder().username("user").password(this.passwordEncoder.encode("password"))
-		.roles(Arrays.asList("ROLE_USER")).build());
+	this.users.save(User.builder()
+		.username("user")
+		.password(this.passwordEncoder.encode("password"))
+		.roles(Arrays.asList( "ROLE_USER"))
+		.build()
+	);
 
-	this.users.save(User.builder().username("admin").password(this.passwordEncoder.encode("password"))
-		.roles(Arrays.asList("ROLE_USER", "ROLE_ADMIN")).build());
+	this.users.save(User.builder()
+		.username("admin")
+		.password(this.passwordEncoder.encode("password"))
+		.roles(Arrays.asList("ROLE_USER", "ROLE_ADMIN"))
+		.build()
+	);
 
-	log.debug("printing all users ...");
+	log.debug("printing all users...");
 	this.users.findAll().forEach(v -> log.debug(" User :" + v.toString()));
-
+	*/
     }
 }

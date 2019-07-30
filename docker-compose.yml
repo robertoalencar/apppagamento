@@ -1,14 +1,8 @@
-version: '3.3' # specify docker-compose version
-
-services:
-
-  mysql57:
-    restart: always
-    image: mysql:5.7
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=apppagamento
-    volumes:
-      - ./mysqlData/:/var/lib/mysql/
-    ports:
-      - "3306:3306"
+db:
+  image: postgres:9.6
+  restart: always
+  environment:
+    POSTGRES_PASSWORD: apppagamento
+    POSTGRES_DB: apppagamento
+  ports:
+  - 5433:5432
